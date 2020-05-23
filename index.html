@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +7,25 @@
 
     <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/marked@1.1.0/marked.min.js" />
     <link rel="stylesheet" href="https://newcss.net/theme/night.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/marked@1.1.0/marked.min.js"></script>
 </head>
 <body>
     <header>
-        <h1>Hello NewCss</h1>
+        <h1>Hello SampleBlog</h1>
     </header>
-    <p>Hello World</p>
+
+    <div id="content"></div>
+
+    <script>
+        fetch("./articles/article2.json",{
+            method:"GET"
+        }).then((res)=>{
+            res.text().then((text)=>{
+                document.getElementById('content').innerHTML = marked(text);
+            });
+        });
+    </script>
 </body>
 </html>

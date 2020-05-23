@@ -1,0 +1,75 @@
+## 微软宣布Project Reunion计划：统一Win32和UWP应用
+
+微软宣布了Project Reunion计划，这是一个让Windows 10平台的应用开发更容易的新项目。Project Reunion统一了对现有Win32（传统的Windows API）和UWP（通用Windows平台）API的访问，并通过NuGet等工具使其与操作系统分离开来。使用 Project Reunion 组件构建的应用程序可以在所有 Windows 10 版本和设备上运行，这将为新应用提供一个通用平台。
+
+![ProjectReunion](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/ProjectReunion.jpg "ProjectReunion")
+
+## Windows软件包管理器winget
+
+你可以启动Windows软件包管理器并运行新的“winget”命令，以获取要安装的任何应用程序的最新版本。你只需运行“winget install PowerToys”即可安装它，而无需访问Github、第三方网站或Microsoft Store。
+
+[体验预览版本](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR-NSOqDz219PqoOqk5qxQEZUNFkzQVcxMkJXWEFCUkE4WThQWUJMVlA1Ty4u)
+
+[Github](https://github.com/microsoft/winget-cli)
+
+![winget](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/winget.png "winget")
+
+## Windows Terminal 1.0 正式发布
+
+在Build 2019上，微软宣布推出Windows Terminal，这是针对命令行用户的新应用程序。它支持Unicode和UTF-8字符支持，丰富的字体，GPU加速的文本渲染，自定义主题样式配置、多选项卡等。从那以后，它经历了多个预览版迭代。今天，在Build 2020开发者大会上，微软宣布Windows Terminal 1.0版本正式可用。
+
+[微软商店](https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab)
+
+[官方文档](https://docs.microsoft.com/zh-cn/windows/terminal/?WT.mc_id=Build2020_DocsMsftTwitter_-twitter-devrel)
+
+![WindowsTerminal](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/WindowsTerminal.png "WindowsTerminal")
+
+## WSL 升级硬件加速，Windows 可直接运行 Linux GUI 应用
+
+Build 2020开发者大会上宣布了Windows Subsystem for Linux (WSL)的重大更新。此更新增加了对硬件加速的支持，使Linux GUI应用程序可以直接在Windows 10上运行。这样，任何人都可以在Windows上轻松运行他们喜欢的Linux应用程序。
+
+[官方博客](https://devblogs.microsoft.com/commandline/the-windows-subsystem-for-linux-build-2020-summary/)
+
+![WSLGUI](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/WSLGUI.png "WSLGUI")
+
+
+## Chromium 版 Edge 浏览器 Linux 版本亮相
+
+微软于今年1月份推出的经过改进的 Chromium 版 Edge 浏览器已进入Linux操作系统，并有望在今年晚些时候在开源平台上发布。Chromium 版 Edge 广受好评，现已在Windows和macOS系统上提供。微软最近确认Linux版本也正在运行开发。微软计划到2020年底在所有主要的台式机和移动操作系统上提供Edge浏览器。
+
+![Edge](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/Edge.jpg "Edge")
+
+## 宣布 .Net 跨平台 UI MAUI
+
+微软也宣布了 .Net 跨平台 APP UI，是进化版的 Xamarin.Forms，支持 Android、iOS、Mac 以及 Windows 平台！只需创建一个 Project 即可面向跨平台开发，部署起来更方面，并且内置的跨平台资源包可以添加各种镜像、字体以及翻译文件！
+
+[官方博客](https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui/) 
+
+[Github](https://github.com/dotnet/maui)
+
+![MAUI2](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/MAUI1.jpg "MAUI")
+
+
+## Blazor WebAssembly正式发布
+
+Blazor 是一个使用 .NET 生成交互式客户端 Web UI 的框架：
+
+- 使用 C# 代替 JavaScript 来创建丰富的交互式 UI。
+- 共享使用 .NET 编写的服务器端和客户端应用逻辑。
+- 将 UI 呈现为 HTML 和 CSS，以支持众多浏览器，其中包括移动浏览器。
+- 与新式托管平台（如 Docker）集成。
+
+[官方博客](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-now-available/)
+
+![Blazor](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/Blazor.jpg "Blazor")
+
+## .NET 5 Preview 4 预览
+
+- 发布 .NET Core 的 Windows Forms 设计器
+- 新增对 Windows ARM64 的支持
+
+预览版没啥好说的，直接去看博客吧....
+
+[官方博客](https://devblogs.microsoft.com/dotnet/announcing-net-5-preview-4-and-our-journey-to-one-net/)
+
+![dotnet5preview4](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/dotnet5preview4.png "dotnet5preview4")
