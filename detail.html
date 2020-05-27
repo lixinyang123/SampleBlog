@@ -24,7 +24,7 @@
         var href = window.location.href;
         if(href.includes("#")){
             var page = href.substring(href.indexOf("#")+1);
-            href = "./articles/article" + page + ".txt";
+            href = "/articles/" + page + ".txt";
             fetch(href,{
                 method:"GET"
             }).then((res)=>{

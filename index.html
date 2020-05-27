@@ -15,31 +15,52 @@
 </head>
 <body>
     <header>
-        <h2>Name's Blog</h2>
+        <h2>
+            <span id="name"></span>
+            &nbsp;Blog
+        </h2>
     </header>
 
     <div id="content"></div>
 
     <script>
-        function showData(){
-            
+        function showData(articles){
+            for(var i=0;i<articles.length;i++){
+                var article = document.createElement("div");
+
+                var title = document.createElement("h2");
+                title.innerText = articles[i].title;
+
+                var desc = document.createElement("p");
+                desc.innerText = articles[i].desc;
+
+                var link = document.createElement("a");
+                link.href = "/detail.html#" + articles[i].article;
+
+                var btn = document.createElement("button");
+                btn.innerText = "Detail";
+                link.appendChild(btn);
+
+                var hr = document.createElement("hr");
+
+                article.appendChild(title);
+                article.appendChild(desc);
+                article.appendChild(link);
+                article.appendChild(hr);
+
+                document.querySelector("#content").appendChild(article);
+            }
         }
 
-        fetch("./config.json",{
+        fetch("/config.json",{
             method:"GET"
         }).then((res)=>{
             res.json().then((config)=>{
-                showData(config);
+                document.querySelector("#name").innerText = config.name + "'s";
+                showData(config.articles);
             });
         });
     </script>
-
-    <h2>1234</h2>
-    <p>balabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabala</p>
-    <a href="detail.html#1">
-        <button>Detail</button>
-    </a>
-    <hr/>
 
 </body>
 </html>

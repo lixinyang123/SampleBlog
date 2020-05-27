@@ -1,22 +1,25 @@
-[
-    {
-        "title":"Title1",
-        "desc":"巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉",
-        "article":"article1.txt"
-    },
-    {
-        "title":"Title2",
-        "desc":"巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉",
-        "article":"article2.txt"
-    },
-    {
-        "title":"Title3",
-        "desc":"巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉",
-        "article":"article1.txt"
-    },
-    {
-        "title":"Title4",
-        "desc":"巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉",
-        "article":"article2.txt"
-    }
-]
+{
+    "name":"LLLXY",
+    "articles":[
+        {
+            "title":"Title1",
+            "desc":"巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉",
+            "article":"article1"
+        },
+        {
+            "title":"Title2",
+            "desc":"巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉",
+            "article":"article2"
+        },
+        {
+            "title":"Title3",
+            "desc":"巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉",
+            "article":"article1"
+        },
+        {
+            "title":"Title4",
+            "desc":"巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉",
+            "article":"article2"
+        }
+    ]
+}
