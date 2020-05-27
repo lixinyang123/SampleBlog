@@ -15,7 +15,7 @@
 </head>
 <body>
     <header>
-        <h1>Name's Blog</h1>
+        <h2>Name's Blog</h2>
     </header>
 
     <div id="content"></div>
@@ -26,7 +26,7 @@
         }).then((res)=>{
             res.text().then((text)=>{
                 document.getElementById('content').innerHTML = marked(text);
-                hljs.initHighlightingOnLoad();
+                hljs.initHighlighting();
             });
         });
     </script>
