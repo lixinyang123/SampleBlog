@@ -24,6 +24,20 @@
     <div id="content"></div>
 
     <script>
+        function showArticle(name){
+            var href = "/articles/" + name + ".txt";
+            fetch(href,{
+                method:"GET"
+            }).then((res)=>{
+                if(res.status==200){
+                    res.text().then((text)=>{
+                        document.getElementById('content').innerHTML = marked(text);
+                        hljs.initHighlighting();
+                    });
+                }
+            });
+        }
+
         function showData(articles){
             for(var i=0;i<articles.length;i++){
                 var article = document.createElement("div");
@@ -35,10 +49,9 @@
                 desc.innerText = articles[i].desc;
 
                 var link = document.createElement("a");
-                link.href = "/detail.html#" + articles[i].article;
-
                 var btn = document.createElement("button");
                 btn.innerText = "Detail";
+                btn.setAttribute("onclick","showArticle('" + articles[i].file + "')");
                 link.appendChild(btn);
 
                 var hr = document.createElement("hr");
@@ -52,14 +65,18 @@
             }
         }
 
-        fetch("/config.json",{
-            method:"GET"
-        }).then((res)=>{
-            res.json().then((config)=>{
-                document.querySelector("#name").innerText = config.name + "'s";
-                showData(config.articles);
+        function init(){
+            fetch("/config.json",{
+                method:"GET"
+            }).then((res)=>{
+                res.json().then((config)=>{
+                    document.querySelector("#name").innerText = config.name + "'s";
+                    showData(config.articles);
+                });
             });
-        });
+        }
+        
+        init();
     </script>
 
 </body>
