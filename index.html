@@ -73,22 +73,23 @@
         function init(){
             window.onpopstate = init;
 
-            var href = window.location.href;
-            if(href.includes("#")){
-                var article = href.substring(href.indexOf("#")+1);
-                showArticle(article);
-            }
-            else{
-                fetch("/config.json",{
-                    method:"GET"
-                }).then((res)=>{
-                    res.json().then((body)=>{
-                        config = body;
-                        showConf();
+            fetch("/config.json",{
+                method:"GET"
+            }).then((res)=>{
+                res.json().then((body)=>{
+                    config = body;
+                    showConf();
+                    
+                    var href = window.location.href;
+                    if(href.includes("#")){
+                        var article = href.substring(href.indexOf("#")+1);
+                        showArticle(article);
+                    }
+                    else{
                         showData();
-                    });
+                    }
                 });
-            }
+            });
         }
         
         init();
