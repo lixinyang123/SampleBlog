@@ -11,14 +11,10 @@
     <link rel="stylesheet" href="https://newcss.net/theme/night.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/marked@1.1.0/marked.min.js"></script>
-    <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script> 
 </head>
 <body>
     <header>
-        <h2>
-            <span id="name"></span>
-            &nbsp;Blog
-        </h2>
+        <h2><span id="name"></span></h2>
     </header>
 
     <div id="content"></div>
@@ -34,7 +30,6 @@
                 if(res.status==200){
                     res.text().then((text)=>{
                         document.getElementById('content').innerHTML = marked(text);
-                        hljs.initHighlighting();
                         var href = "#" + name;
                         history.pushState({page: name},name,href);
                     });
@@ -71,6 +66,12 @@
             }
         }
 
+        function showConf(){
+            var name = config.name + "'s Blog";
+            document.querySelector("#name").innerText = name;
+            document.querySelector("title").innerText = name;
+        }
+
         function init(){
             window.onpopstate = init;
 
@@ -85,7 +86,7 @@
                 }).then((res)=>{
                     res.json().then((body)=>{
                         config = body;
-                        document.querySelector("#name").innerText = config.name + "'s";
+                        showConf();
                         showData();
                     });
                 });
