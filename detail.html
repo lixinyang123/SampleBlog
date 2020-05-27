@@ -21,14 +21,19 @@
     <div id="content"></div>
 
     <script>
-        fetch("./articles/article2.txt",{
-            method:"GET"
-        }).then((res)=>{
-            res.text().then((text)=>{
-                document.getElementById('content').innerHTML = marked(text);
-                hljs.initHighlighting();
+        var href = window.location.href;
+        if(href.includes("#")){
+            var page = href.substring(href.indexOf("#")+1);
+            href = "./articles/article" + page + ".txt";
+            fetch(href,{
+                method:"GET"
+            }).then((res)=>{
+                res.text().then((text)=>{
+                    document.getElementById('content').innerHTML = marked(text);
+                    hljs.initHighlighting();
+                });
             });
-        });
+        }
     </script>
 </body>
 </html>
