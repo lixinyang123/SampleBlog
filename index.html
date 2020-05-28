@@ -51,6 +51,7 @@
         function showData(){
             document.querySelector("#content").innerHTML = "";
             var articles = config.articles;
+            articles.reverse();
             for(var i=0;i<articles.length;i++){
                 var article = document.createElement("div");
 
