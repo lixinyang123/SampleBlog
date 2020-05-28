@@ -6,7 +6,37 @@
     <title>Sample Blog</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"/>
-    <link rel="stylesheet" href="/theme.css"/>
+    <style>
+        .light {
+            --nc-font-sans: 'Fira Code', monospace;
+            --nc-font-mono: 'Fira Code', monospace;
+            --nc-tx-1: #000000;
+            --nc-tx-2: #1A1A1A;
+            --nc-bg-1: #FFFFFF;
+            --nc-bg-2: #F6F8FA;
+            --nc-bg-3: #E5E7EB;
+            --nc-lk-1: #0070F3;
+            --nc-lk-2: #0366D6;
+            --nc-lk-tx: #FFFFFF;
+            --nc-ac-1: #79FFE1;
+            --nc-ac-tx: #0C4047
+        }
+
+        .dark {
+            --nc-font-sans: 'Fira Code', monospace;
+            --nc-font-mono: 'Fira Code', monospace;
+            --nc-tx-1: #FFFFFF;
+            --nc-tx-2: #EEEEEE;
+            --nc-bg-1: #000000;
+            --nc-bg-2: #002700;
+            --nc-bg-3: #005800;
+            --nc-lk-1: #00FF00;
+            --nc-lk-2: #00c200;
+            --nc-lk-tx: #000000;
+            --nc-ac-1: #00FF00;
+            --nc-ac-tx: #000000;
+        }
+    </style>
 
     <script src="https://cdn.jsdelivr.net/npm/marked@1.1.0/marked.min.js"></script>
 </head>
@@ -15,6 +45,8 @@
         <h2 id="name"></h2>
         <div>
             <a href="/">Home</a>
+            |
+            <a href="javascript:void(0)" onclick="switchTheme()">Theme</a>
         </div>
     </header>
 
@@ -24,13 +56,22 @@
         var config = undefined;
 
         function switchTheme(){
+            if(document.body.className == "light"){
+                document.body.className = "dark";
+            }
+            else{
+                document.body.className = "light";
+            }
+        }
+
+        function initTheme(){
             if(config.theme=="auto"){
                 var time = new Date().getHours();
                 if(time > 6 && time < 19){
                     document.body.className = "light";
                 }
                 else{
-                    document.body.className = "terminal";
+                    document.body.className = "dark";
                 }
             }
             else{
@@ -102,7 +143,7 @@
                 res.json().then((body)=>{
                     config = body;
                     showConf();
-                    switchTheme();
+                    initTheme();
 
                     var href = window.location.href;
                     if(href.includes("#")){
