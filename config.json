@@ -1,5 +1,6 @@
 {
     "name":"Sample",
+    "theme":"auto",
     "articles":[
         {
             "title":"介绍 Crawler Generator",

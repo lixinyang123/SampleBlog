@@ -24,12 +24,17 @@
         var config = undefined;
 
         function switchTheme(){
-            var time = new Date().getHours();
-            if(time > 6 && time < 19){
-                document.body.className = "light";
+            if(config.theme=="auto"){
+                var time = new Date().getHours();
+                if(time > 6 && time < 19){
+                    document.body.className = "light";
+                }
+                else{
+                    document.body.className = "terminal";
+                }
             }
             else{
-                document.body.className = "terminal";
+                document.body.className = config.theme;
             }
         }
 
@@ -90,7 +95,6 @@
 
         function init(){
             window.onpopstate = init;
-            switchTheme();
 
             fetch("/config.json",{
                 method:"GET"
@@ -98,7 +102,8 @@
                 res.json().then((body)=>{
                     config = body;
                     showConf();
-                    
+                    switchTheme();
+
                     var href = window.location.href;
                     if(href.includes("#")){
                         var article = href.substring(href.indexOf("#")+1);
