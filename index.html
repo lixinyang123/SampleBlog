@@ -7,12 +7,19 @@
 
     <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css" />
+    <!-- <link rel="stylesheet" href="https://newcss.net/theme/night.css" /> -->
+    <link rel="stylesheet" href="https://newcss.net/theme/terminal.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/marked@1.1.0/marked.min.js"></script>
 </head>
 <body>
     <header>
         <h2 id="name"></h2>
+        <div>
+            <a href="/">Home</a>
+            |
+            <a href="javascript:void(0);">Theme</a>
+        </div>
     </header>
 
     <div id="content"></div>
@@ -44,6 +51,9 @@
                 var title = document.createElement("h2");
                 title.innerText = articles[i].title;
 
+                var time = document.createElement("p");
+                time.innerText = articles[i].time;
+
                 var desc = document.createElement("p");
                 desc.innerText = articles[i].desc;
 
@@ -56,6 +66,7 @@
                 var hr = document.createElement("hr");
 
                 article.appendChild(title);
+                article.appendChild(time);
                 article.appendChild(desc);
                 article.appendChild(link);
                 article.appendChild(hr);
@@ -91,7 +102,7 @@
                 });
             });
         }
-        
+
         init();
     </script>
 
