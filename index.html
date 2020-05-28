@@ -5,19 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample Blog</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css" />
-    <link rel="stylesheet" href="https://newcss.net/theme/terminal.css" />
-    <!-- <link rel="stylesheet" href="https://newcss.net/theme/night.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"/>
+    <link rel="stylesheet" href="/theme.css"/>
 
     <script src="https://cdn.jsdelivr.net/npm/marked@1.1.0/marked.min.js"></script>
 </head>
-<body>
+<body class="terminal">
     <header>
         <h2 id="name"></h2>
         <div>
             <a href="/">Home</a>
-            |
-            <a href="javascript:void(0);">Theme</a>
         </div>
     </header>
 
@@ -25,6 +22,16 @@
 
     <script>
         var config = undefined;
+
+        function switchTheme(){
+            var time = new Date().getHours();
+            if(time > 6 && time < 19){
+                document.body.className = "light";
+            }
+            else{
+                document.body.className = "terminal";
+            }
+        }
 
         function showArticle(name){
             var href = "/articles/" + name + "/content.txt";
@@ -82,6 +89,7 @@
 
         function init(){
             window.onpopstate = init;
+            switchTheme();
 
             fetch("/config.json",{
                 method:"GET"
