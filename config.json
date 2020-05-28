@@ -5,13 +5,13 @@
             "title":"Microsoft Build 2020 第一天内容汇总",
             "time":"2020/5/27",
             "desc":"微软 Build 2020 开发者大会在北京时间5月19日晚上23点开始，微软CEO萨提亚纳德拉参与开幕致辞，此外，斯科特·汉塞尔曼、斯科特·格思里、拉杰什·贾和凯文·斯科特等重磅大咖，也带来了有关Microsoft Azure、Microsoft Teams和Microsoft Graph及软件开发的新兴趋势等话题分享，干货满满。",
-            "file":"article1"
+            "folder":"article1"
         },
         {
             "title":"介绍 Crawler Generator",
             "time":"2020/5/28",
             "desc":"CrawlerGenerator，从名字就能看出来，爬虫生成器。可以通过点击鼠标来生成Puppeteer爬虫脚本（Puppeteer是谷歌开源的无头Chrome浏览器的Node.js API），这个是我很早很早以前画的饼。不过写了一半由于种种原因被我搁置了，不过基本功能已经实现了，平时自己用着还凑合，这篇博客记录一下爬虫生成器踩的一些坑。",
-            "file":"article2"
+            "folder":"article2"
         }
     ]
 }

@@ -28,7 +28,7 @@
         var config = undefined;
 
         function showArticle(name){
-            var href = "/articles/" + name + ".txt";
+            var href = "/articles/" + name + "/content.txt";
             fetch(href,{
                 method:"GET"
             }).then((res)=>{
@@ -60,7 +60,7 @@
                 var link = document.createElement("a");
                 var btn = document.createElement("button");
                 btn.innerText = "Detail";
-                btn.setAttribute("onclick","showArticle('" + articles[i].file + "')");
+                btn.setAttribute("onclick","showArticle('" + articles[i].folder + "')");
                 link.appendChild(btn);
 
                 var hr = document.createElement("hr");

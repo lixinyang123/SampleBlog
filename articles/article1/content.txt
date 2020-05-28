@@ -2,7 +2,7 @@
 
 微软宣布了Project Reunion计划，这是一个让Windows 10平台的应用开发更容易的新项目。Project Reunion统一了对现有Win32（传统的Windows API）和UWP（通用Windows平台）API的访问，并通过NuGet等工具使其与操作系统分离开来。使用 Project Reunion 组件构建的应用程序可以在所有 Windows 10 版本和设备上运行，这将为新应用提供一个通用平台。
 
-![ProjectReunion](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/ProjectReunion.jpg "ProjectReunion")
+![ProjectReunion](./articles/article1/imgs/ProjectReunion.jpg "ProjectReunion")
 
 ## Windows软件包管理器winget
 
@@ -12,7 +12,7 @@
 
 [Github](https://github.com/microsoft/winget-cli)
 
-![winget](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/winget.png "winget")
+![winget](./articles/article1/imgs/winget.png "winget")
 
 ## Windows Terminal 1.0 正式发布
 
@@ -22,7 +22,7 @@
 
 [官方文档](https://docs.microsoft.com/zh-cn/windows/terminal/?WT.mc_id=Build2020_DocsMsftTwitter_-twitter-devrel)
 
-![WindowsTerminal](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/WindowsTerminal.png "WindowsTerminal")
+![WindowsTerminal](./articles/article1/imgs/WindowsTerminal.png "WindowsTerminal")
 
 ## WSL 升级硬件加速，Windows 可直接运行 Linux GUI 应用
 
@@ -30,14 +30,14 @@ Build 2020开发者大会上宣布了Windows Subsystem for Linux (WSL)的重大�
 
 [官方博客](https://devblogs.microsoft.com/commandline/the-windows-subsystem-for-linux-build-2020-summary/)
 
-![WSLGUI](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/WSLGUI.png "WSLGUI")
+![WSLGUI](./articles/article1/imgs/WSLGUI.png "WSLGUI")
 
 
 ## Chromium 版 Edge 浏览器 Linux 版本亮相
 
 微软于今年1月份推出的经过改进的 Chromium 版 Edge 浏览器已进入Linux操作系统，并有望在今年晚些时候在开源平台上发布。Chromium 版 Edge 广受好评，现已在Windows和macOS系统上提供。微软最近确认Linux版本也正在运行开发。微软计划到2020年底在所有主要的台式机和移动操作系统上提供Edge浏览器。
 
-![Edge](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/Edge.jpg "Edge")
+![Edge](./articles/article1/imgs/Edge.jpg "Edge")
 
 ## 宣布 .Net 跨平台 UI MAUI
 
@@ -47,7 +47,7 @@ Build 2020开发者大会上宣布了Windows Subsystem for Linux (WSL)的重大�
 
 [Github](https://github.com/dotnet/maui)
 
-![MAUI2](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/MAUI1.jpg "MAUI")
+![MAUI2](./articles/article1/imgs/MAUI.jpg "MAUI")
 
 
 ## Blazor WebAssembly正式发布
@@ -61,7 +61,7 @@ Blazor 是一个使用 .NET 生成交互式客户端 Web UI 的框架：
 
 [官方博客](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-now-available/)
 
-![Blazor](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/Blazor.jpg "Blazor")
+![Blazor](./articles/article1/imgs/Blazor.jpg "Blazor")
 
 ## .NET 5 Preview 4 预览
 
@@ -72,4 +72,4 @@ Blazor 是一个使用 .NET 生成交互式客户端 Web UI 的框架：
 
 [官方博客](https://devblogs.microsoft.com/dotnet/announcing-net-5-preview-4-and-our-journey-to-one-net/)
 
-![dotnet5preview4](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/dotnet5preview4.png "dotnet5preview4")
+![dotnet5preview4](./articles/article1/imgs/dotnet5preview4.png "dotnet5preview4")

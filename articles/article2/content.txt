@@ -17,7 +17,7 @@ console.log(dom.window.document.querySelector("p").textContent);
 
 Puppeteer 是一个 Node 库，它提供了一个高级 API 来通过 DevTools 协议控制 Chromium 或 Chrome。Puppeteer 默认以 headless 模式运行，但是可以通过修改配置文件运行“有头”模式。
 
-![](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/puppeteer.png)
+![](./articles/article2/imgs/puppeteer.png)
 
 #### 你可以使用Puppeteer做什么？
 - 生成页面 PDF。
@@ -65,7 +65,7 @@ Puppeteer 初始化的屏幕大小默认为 800px * 600px。但是这个尺寸�
 
 先看[选择器部分](https://zhaoqize.github.io/puppeteer-api-zh_CN/#?product=Puppeteer&version=v3.0.2&show=api-pageselector "选择器部分")
 
-![](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/批注 2020-05-06 225320.jpg)
+![](./articles/article2/imgs/doc.jpg)
 
 -  **page.$(selector)**
 此方法在页面内执行 document.querySelector。如果没有元素匹配指定选择器，返回值是 null。
@@ -92,7 +92,7 @@ document.onmouseover = () => {
 
 随便打开个网页晃晃鼠标试试。。。
 
-![](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/批注 2020-05-07 193017.jpg)
+![](./articles/article2/imgs/demo.jpg)
 
 这样肯定不行，所以要加上鼠标移出元素清除边框
 
