@@ -62,10 +62,14 @@
             else{
                 document.body.className = "light";
             }
+            //将现主题存入cookie
         }
 
         function initTheme(){
-            if(config.theme=="auto"){
+            if(false){
+                //cookie中获取主题
+            }
+            else{
                 var time = new Date().getHours();
                 if(time > 6 && time < 19){
                     document.body.className = "light";
@@ -73,9 +77,6 @@
                 else{
                     document.body.className = "dark";
                 }
-            }
-            else{
-                document.body.className = config.theme;
             }
         }
 
