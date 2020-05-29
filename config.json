@@ -1,7 +1,7 @@
 {
     "name":"Sample",
     "theme":"auto",
-    "pageSize":"2",
+    "pageSize":"5",
     "articles":[
         {
             "title":"1介绍 Crawler Generator",

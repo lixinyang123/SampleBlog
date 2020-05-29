@@ -52,6 +52,8 @@
 
     <div id="content"></div>
 
+    <a id="more" href="javascript:void(0)" onclick="nextPage()">LoadMore</a>
+
     <script>
         var config = undefined;
         var currentIndex = 0;
@@ -76,6 +78,7 @@
         }
 
         function showArticle(name){
+            window.scrollTo(0,0);
             var href = "/articles/" + name + "/content.txt";
             fetch(href,{
                 method:"GET"
