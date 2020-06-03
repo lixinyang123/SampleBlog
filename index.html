@@ -151,7 +151,8 @@
         }
 
         function init(){
-
+            window.onpopstate = init;
+            
             fetch("/config.json",{
                 method:"GET"
             }).then((res)=>{
