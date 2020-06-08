@@ -104,6 +104,9 @@
         }
 
         function showData(){
+            
+            document.querySelector("#content").innerHTML = "";
+
             var articles = config.articles;
 
             var start = currentIndex * Number(config.pageSize);
@@ -151,7 +154,10 @@
         }
 
         function init(){
-            window.onpopstate = init;
+            window.onpopstate = ()=>{
+                currentIndex = 0;
+                init();
+            };
             
             fetch("/config.json",{
                 method:"GET"
