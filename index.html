@@ -57,6 +57,7 @@
     <script>
         var config = undefined;
         var currentIndex = 0;
+        var scrollSize = 0;
 
         function switchTheme(){
             if(document.body.className == "light"){
@@ -78,6 +79,9 @@
         }
 
         function showArticle(name){
+            document.querySelector("#more").setAttribute("hidden","hidden");
+            scrollSize = window.scrollY;
+            
             window.scrollTo(0,0);
             var href = "/articles/" + name + "/content.txt";
             fetch(href,{
@@ -88,7 +92,6 @@
                         document.getElementById('content').innerHTML = marked(text);
                         var href = "#" + name;
                         history.pushState({page: name},name,href);
-                        document.querySelector("#more").setAttribute("hidden","hidden");
                     });
                 }
             });
@@ -154,13 +157,21 @@
             document.querySelector("title").innerText = name;
         }
 
+        function back(){
+            document.querySelector("#content").innerHTML = "";
+            var lastIndex = currentIndex;
+            currentIndex = 0;
+            while(currentIndex!=lastIndex){
+                showData();
+            }
+            setTimeout(()=>{
+                window.scrollTo(0, scrollSize);
+            },500);
+        }
+
         function init(){
-            window.onpopstate = ()=>{
-                document.querySelector("#content").innerHTML = "";
-                currentIndex = 0;
-                init();
-            };
-            
+            window.onpopstate = back;
+
             fetch("/config.json",{
                 method:"GET"
             }).then((res)=>{
