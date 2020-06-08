@@ -52,7 +52,7 @@
 
     <div id="content"></div>
 
-    <a id="more" href="javascript:void(0)" onclick="nextPage()">LoadMore</a>
+    <a id="more" href="javascript:void(0)" onclick="nextPage()" hidden>LoadMore</a>
 
     <script>
         var config = undefined;
@@ -88,6 +88,7 @@
                         document.getElementById('content').innerHTML = marked(text);
                         var href = "#" + name;
                         history.pushState({page: name},name,href);
+                        document.querySelector("#more").setAttribute("hidden","hidden");
                     });
                 }
             });
@@ -104,9 +105,9 @@
         }
 
         function showData(){
-            
-            document.querySelector("#content").innerHTML = "";
 
+            document.querySelector("#more").removeAttribute("hidden");
+            
             var articles = config.articles;
 
             var start = currentIndex * Number(config.pageSize);
@@ -155,6 +156,7 @@
 
         function init(){
             window.onpopstate = ()=>{
+                document.querySelector("#content").innerHTML = "";
                 currentIndex = 0;
                 init();
             };
