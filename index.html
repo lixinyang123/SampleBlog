@@ -171,7 +171,7 @@
 
         function init(){
             window.onpopstate = back;
-            var url = "/config.json" + Math.random();
+            var url = "/config.json" + "?" + Math.random();
             fetch(url,{
                 method:"GET"
             }).then((res)=>{
