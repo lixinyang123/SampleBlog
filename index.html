@@ -121,32 +121,18 @@
             }
 
             for(var i=start;i<end;i++){
-                var article = document.createElement("div");
 
-                var title = document.createElement("h2");
-                title.innerText = articles[i].title;
+                var html = `
+                    <div>
+                        <h3>${articles[i].title}</h3>
+                        <p>${articles[i].time}</p>
+                        <p>${articles[i].desc}</p>
+                        <a><button onclick="showArticle('${articles[i].title}')">Detail</button></a>
+                        <hr>
+                    </div>
+                `;
 
-                var time = document.createElement("p");
-                time.innerText = articles[i].time;
-
-                var desc = document.createElement("p");
-                desc.innerText = articles[i].desc;
-
-                var link = document.createElement("a");
-                var btn = document.createElement("button");
-                btn.innerText = "Detail";
-                btn.setAttribute("onclick","showArticle('" + articles[i].folder + "')");
-                link.appendChild(btn);
-
-                var hr = document.createElement("hr");
-
-                article.appendChild(title);
-                article.appendChild(time);
-                article.appendChild(desc);
-                article.appendChild(link);
-                article.appendChild(hr);
-
-                document.querySelector("#content").appendChild(article);
+                document.querySelector("#content").innerHTML += html;
             }
             currentIndex++;
         }
