@@ -56,9 +56,9 @@
     <a id="more" href="javascript:void(0)" onclick="nextPage()" hidden>LoadMore</a>
 
     <script>
-        var config = undefined;
-        var currentIndex = 0;
-        var scrollSize = 0;
+        let config = undefined;
+        let currentIndex = 0;
+        let scrollSize = 0;
 
         function switchTheme(){
             if(document.body.className == "light"){
@@ -70,7 +70,7 @@
         }
 
         function initTheme(){
-            var time = new Date().getHours();
+            let time = new Date().getHours();
             if(time > 6 && time < 19){
                 document.body.className = "light";
             }
@@ -84,14 +84,14 @@
             scrollSize = window.scrollY;
             
             window.scrollTo(0,0);
-            var href = "/articles/" + name + "/content.txt";
+            let href = "/articles/" + name + "/content.txt";
             fetch(href,{
                 method:"GET"
             }).then((res)=>{
                 if(res.status==200){
                     res.text().then((text)=>{
                         document.getElementById('content').innerHTML = marked(text);
-                        var href = "#" + name;
+                        let href = "#" + name;
                         history.pushState({page: name},name,href);
                     });
                 }
@@ -99,7 +99,7 @@
         }
 
         function nextPage(){
-            var endIndex = Math.ceil(config.articles.length/Number(config.pageSize));
+            let endIndex = Math.ceil(config.articles.length/Number(config.pageSize));
             if(currentIndex!=endIndex){
                 showData();
             }
@@ -112,18 +112,18 @@
 
             document.querySelector("#more").removeAttribute("hidden");
             
-            var articles = config.articles;
+            let articles = config.articles;
 
-            var start = currentIndex * Number(config.pageSize);
-            var end = start + Number(config.pageSize);
+            let start = currentIndex * Number(config.pageSize);
+            let end = start + Number(config.pageSize);
 
             if(end>articles.length){
                 end = articles.length;
             }
 
-            for(var i=start;i<end;i++){
+            for(let i=start;i<end;i++){
 
-                var html = `
+                let html = `
                     <div>
                         <h3>${articles[i].title}</h3>
                         <p>${articles[i].time}</p>
@@ -139,14 +139,14 @@
         }
 
         function showConf(){
-            var name = config.name + "'s Blog";
+            let name = config.name + "'s Blog";
             document.querySelector("#name").innerText = name;
             document.querySelector("title").innerText = name;
         }
 
         function back(){
             document.querySelector("#content").innerHTML = "";
-            var lastIndex = currentIndex;
+            let lastIndex = currentIndex;
             currentIndex = 0;
             while(currentIndex!=lastIndex){
                 showData();
@@ -158,7 +158,7 @@
 
         function init(){
             window.onpopstate = back;
-            var url = "/config.json" + "?" + Math.random();
+            let url = "/config.json" + "?" + Math.random();
             fetch(url,{
                 method:"GET"
             }).then((res)=>{
@@ -167,9 +167,9 @@
                     showConf();
                     initTheme();
 
-                    var href = window.location.href;
+                    let href = window.location.href;
                     if(href.includes("#")){
-                        var article = href.substring(href.indexOf("#")+1);
+                        let article = href.substring(href.indexOf("#")+1);
                         showArticle(article);
                     }
                     else{
