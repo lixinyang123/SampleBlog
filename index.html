@@ -84,7 +84,7 @@
             scrollSize = window.scrollY;
             
             window.scrollTo(0,0);
-            let href = "/articles/" + name + "/content.txt";
+            let href = "./articles/" + name + "/content.txt";
             fetch(href,{
                 method:"GET"
             }).then((res)=>{
