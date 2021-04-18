@@ -158,7 +158,7 @@
 
         function init(){
             window.onpopstate = back;
-            let url = "/config.json" + "?" + Math.random();
+            let url = "./config.json" + "?" + Math.random();
             fetch(url,{
                 method:"GET"
             }).then((res)=>{
