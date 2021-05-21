@@ -1,3 +1,3 @@
 ## SampleBlog
 
-A sample, static blog system base on new.css
+A sample blog system base on new.css
